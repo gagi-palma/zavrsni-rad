@@ -1,0 +1,199 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", Arial, sans-serif;
+}
+
+.navbar {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    background-color: #000000cb;
+
+}
+
+.navbar div {
+    position: relative;
+    text-align: center;
+}
+
+.navbar div a {
+    display: block;
+    text-decoration: none;
+    padding: 6px 0;
+    color: rgb(255, 255, 255);
+    font-size: 2vw;
+}
+
+.navbar .home {
+    background-color: rgb(2, 2, 2);
+}
+
+.navbar .home a {
+    color: rgba(190, 134, 243, 0.856);
+}
+
+.navbar .home span {
+    color: rgba(84, 149, 247, 0.836);
+}
+
+.navSection a:before {
+    position: absolute;
+    content: "";
+    height: 3px;
+    bottom: 0px;
+    left: 0;
+    background-color: rgb(255, 208, 56);
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.4s ease-in-out 0s;
+    width: 100%;
+}
+
+.navSection a:hover:before {
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+.navbar div a i,
+.navLeft div a i {
+    font-size: 0.7em;
+    padding-left: 5px;
+    display: inline;
+}
+
+.navbar .navSection:hover,
+.navLeft .navSection:hover {
+    background-color: rgba(0, 0, 0, 0.575);
+}
+
+.navbar .navSection:hover .dropdown,
+.navLeft .navSection:hover .dropdown {
+    display: block;
+}
+
+.home a:hover,
+.menuBar:hover {
+    color: gold;
+}
+
+.menuBar {
+    display: none;
+    cursor: pointer;
+    align-items: center;
+    color: white;
+}
+
+.menuBar i {
+    font-size: 3vw;
+}
+
+.navbar .navSection .dropdown {
+    display: none;
+    position: absolute;
+    width: 100%;
+    box-shadow: 0px 8px 16px 2px rgba(0, 0, 0, 0.8);
+    z-index: 1;
+}
+
+.navbar .dropdown a {
+    background-color: rgb(114, 114, 114);
+    display: block;
+    position: relative;
+    opacity: 0.9;
+    color: rgb(255, 255, 255);
+}
+
+.dropdown a:hover,
+.navLeft a:hover {
+    color: gold;
+    background-color: rgba(114, 114, 114, 0.774);
+}
+
+.dropdown a:hover:before {
+    background-color: black;
+}
+
+.navLeft {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.navLeft a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 2vw;
+    color: #ffffff;
+    display: block;
+    transition: 0.2s;
+}
+
+.navLeft a:hover {
+    color: #f1f1f1;
+}
+
+.navLeft .closebtn i {
+    color: gold;
+    font-size: 4vw;
+    cursor: pointer;
+}
+
+.navLeft .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.navLeft .dropdown a {
+    background-color: rgb(114, 114, 114);
+    display: block;
+    position: relative;
+    color: rgb(255, 255, 255);
+}
+
+.navLeft .navSection .dropdown {
+    display: none;
+    position: relative;
+    width: 100%;
+    z-index: 1;
+}
+@media (max-width: 750px) {
+    .navbar {
+        padding-left: 15px;
+        grid-template-columns: auto auto;
+        justify-content: space-between;
+    }
+
+    .navbar .home {
+        background-color: #00000000;
+    }
+
+    .menuBar {
+        padding: 0 15px;
+        display: grid;
+    }
+
+    .navbar div a,
+    .menuBar i {
+        font-size: 4vw;
+    }
+
+    .navbar .navSection {
+        display: none;
+    }
+
+    .navLeft a {
+        font-size: 5vw;
+    }
+    
+}
+   
