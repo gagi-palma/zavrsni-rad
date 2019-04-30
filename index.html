@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,35 +10,209 @@
     <script src="index.js" defer></script>
     <title>Palma travel</title>
 </head>
+
 <body>
-    <header>
-        <div class="navbar" id="navbar">
-            <div class="home"><a href="#">Palma <span>TRAVEL</span></a></div>
-            <div class="navSection"><a href="#">Metropole<i class="fas fa-angle-down"></i></a>
-                <div class="dropdown">
-                    <a href="#">Link 1</a>
-                    <a href="#">Link 2</a>
-                    <a href="#">Link 3</a>
+    <div class="container" id="container">
+        <header>
+            <div class="navbar" id="navbar">
+                <div class="home"><a href="#">Palma <span>TRAVEL</span></a></div>
+                <div class="navSection"><a href="#">Metropole<i class="fas fa-angle-down"></i></a>
+                    <div class="dropdown">
+                        <a href="#">Link 1</a>
+                        <a href="#">Link 2</a>
+                        <a href="#">Link 3</a>
+                    </div>
+                </div>
+                <div class="navSection"><a href="#">Letovanje-Grčka<i class="fas fa-angle-down"></i></a>
+                    <div class="dropdown">
+                        <a href="#">Link 1</a>
+                        <a href="#">Link 2</a>
+                        <a href="#">Link 3</a>
+                    </div>
+                </div>
+                <div class="navSection"><a href="#">Letovanje-Turska<i class="fas fa-angle-down"></i></a>
+                    <div class="dropdown">
+                        <a href="#">Link 1</a>
+                        <a href="#">Link 2</a>
+                        <a href="#">Link 3</a>
+                    </div>
+                </div>
+                <div class="navSection"><a href="#">Kontakt</a></div>
+                <div class="menuBar"><i class="fa fa-bars" onclick="openNav()"></i></div>
+            </div>
+        </header>
+        <section>
+            <div class="pictureContainer">
+                <div class="slideshow-container">
+
+                    <div class="mySlides fade">
+                        <div class="numbertext">1 / 7</div>
+                        <img id="1" src="img/madrid.jpg" alt="Madrid" style="width:100%">
+                    </div>
+
+                    <div class="mySlides fade">
+                        <div class="numbertext">2 / 7</div>
+                        <img id="2" src="img/barcelona.jpg" alt="Barselona" style="width:100%">
+                    </div>
+
+                    <div class="mySlides fade">
+                        <div class="numbertext">3 / 7</div>
+                        <img id="3" src="img/milano.jpg" alt="Milano" style="width:100%">
+                    </div>
+                    <div class="mySlides fade">
+                        <div class="numbertext">4 / 7</div>
+                        <img id="4" src="img/rim.jpg" alt="Rim" style="width:100%">
+                    </div>
+                    <div class="mySlides fade">
+                        <div class="numbertext">5 / 7</div>
+                        <img id="5" src="img/lefkada.jpg" alt="Lefkada" style="width:100%">
+                    </div>
+                    <div class="mySlides fade">
+                        <div class="numbertext">6 / 7</div>
+                        <img id="6" src="img/lisabon.jpg" alt="Lisabon" style="width:100%">
+                    </div>
+                    <div class="mySlides fade">
+                        <div class="numbertext">7 / 7</div>
+                        <img id="7" src="img/zakintos.jpg" alt="Zakintos" style="width:100%">
+                    </div>
+
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                </div>
+
+                <div class="dots">
+                    <div id="text">Caption Three</div>
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                    <span class="dot" onclick="currentSlide(4)"></span>
+                    <span class="dot" onclick="currentSlide(5)"></span>
+                    <span class="dot" onclick="currentSlide(6)"></span>
+                    <span class="dot" onclick="currentSlide(7)"></span>
                 </div>
             </div>
-            <div class="navSection"><a href="#">Letovanje-Grčka<i class="fas fa-angle-down"></i></a>
-                <div class="dropdown">
-                    <a href="#">Link 1</a>
-                    <a href="#">Link 2</a>
-                    <a href="#">Link 3</a>
+        </section>
+        <article>
+            <div class="articleContainer">
+                <div class="topCity">
+                    <div class="top">
+                        <div class="topContainer">
+                            <div class="topImg">
+                                <img src="img/milano.jpg" alt="Madrid">
+                                <div class="topPrice">79‎€
+                                </div>
+                            </div>
+                            <div class="topName">Milano</div>
+                            <div class="topSection">
+                                <div class="topLeft">5d/2n</div>
+                                <div class="topRight"><i class="fas fa-bus-alt"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="top">
+                        <div class="topContainer">
+                            <div class="topImg">
+                                <img src="img/pariz.jpg" alt="Pariz">
+                                <div class="topPrice">79‎€
+                                </div>
+                            </div>
+                            <div class="topName">Pariz</div>
+                            <div class="topSection">
+                                <div class="topLeft">Left</div>
+                                <div class="topRight">Right</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="top">
+                        <div class="topContainer">
+                            <div class="topImg">
+                                <img src="img/barselona2.jpg" alt="Barselona">
+                                <div class="topPrice">79‎€
+                                </div>
+                            </div>
+                            <div class="topName">Barselona</div>
+                            <div class="topSection">
+                                <div class="topLeft">Left</div>
+                                <div class="topRight">Right</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="top">
+                        <div class="topContainer">
+                            <div class="topImg">
+                                <img src="img/venecija.jpg" alt="Venecija">
+                                <div class="topPrice">79‎€
+                                </div>
+                            </div>
+                            <div class="topName">Venecija</div>
+                            <div class="topSection">
+                                <div class="topLeft">Left</div>
+                                <div class="topRight">Right</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="top">
+                        <div class="topContainer">
+                            <div class="topImg">
+                                <img src="img/madrid1.jpg" alt="Madrid">
+                                <div class="topPrice">79‎€
+                                </div>
+                            </div>
+                            <div class="topName">Barselona</div>
+                            <div class="topSection">
+                                <div class="topLeft">Left</div>
+                                <div class="topRight">Right</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="topSea">
+                    <div class="top">1200
+                    </div>
+                    <div class="top">1200
+                    </div>
+                    <div class="top">1200
+                    </div>
+                    <div class="top">1200
+                    </div>
+                    <div class="top">1200
+                    </div>
+                    <div class="top">1200
+                    </div>
+                    <div class="top">1200
+                    </div>
+                    <div class="top">1200
+                    </div>
+                </div>
+        </article>
+        <footer>
+            <div class="footerContainer">
+                <div class="footerUp">
+                    <div class="footImg">
+                        <img src="img/palma.png" alt="Palma">
+                    </div>
+                    <div class="foot">
+                        <p>Turistička organizacija Palma travel osnovana je u aprilu 2019. sa ciljem
+                            da se pronađe idealno mesto za odmor nakon završetka 6-to mesečnih napornih predavanja.</p>
+                    </div>
+                    <div class="footSoc">
+                        <div class="socNet">
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footerDown">
+                    <p>@2019. <span>Palma Travel</span>. All Rights Reserved.</p>
+                    <div>
+                        <a href="#container"><i class="fas fa-arrow-circle-up" title=" Povratak na vrh"></i></a>
+                    </div>
                 </div>
             </div>
-            <div class="navSection"><a href="#">Letovanje-Turska<i class="fas fa-angle-down"></i></a>
-                <div class="dropdown">
-                    <a href="#">Link 1</a>
-                    <a href="#">Link 2</a>
-                    <a href="#">Link 3</a>
-                </div>
-            </div>
-            <div class="navSection"><a href="#">Kontakt</a></div>
-            <div class="menuBar"><i class="fa fa-bars" onclick="openNav()"></i></div>
-        </div>
-    </header>
+        </footer>
+    </div>
     <div class="navLeft" id="navLeft">
         <div class="closebtn" onclick="closeNav()"><i class="fas fa-times"></i></div>
         <div class="navSection"><a href="#">Metropole<i class="fas fa-angle-down"></i></a>
@@ -63,124 +238,6 @@
         </div>
         <div class="navSection"><a href="#">Kontakt</a></div>
     </div>
-    <article>
-        <div class="articleContainer">
-            <div class="topCity">
-                <div class="top">
-                    <div class="topContainer">
-                        <div class="topImg">
-                            <img src="img/milano.jpg" alt="Madrid">
-                            <div class="topPrice">79‎€
-                            </div>
-                        </div>
-                        <div class="topName">Milano</div>
-                        <div class="topSection">
-                            <div class="topLeft">5d/2n</div>
-                            <div class="topRight"><i class="fas fa-bus-alt"></i></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="top">
-                    <div class="topContainer">
-                        <div class="topImg">
-                            <img src="img/pariz.jpg" alt="Pariz">
-                            <div class="topPrice">79‎€
-                            </div>
-                        </div>
-                        <div class="topName">Pariz</div>
-                        <div class="topSection">
-                            <div class="topLeft">Left</div>
-                            <div class="topRight">Right</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="top">
-                    <div class="topContainer">
-                        <div class="topImg">
-                            <img src="img/barselona2.jpg" alt="Barselona">
-                            <div class="topPrice">79‎€
-                            </div>
-                        </div>
-                        <div class="topName">barselona2</div>
-                        <div class="topSection">
-                            <div class="topLeft">Left</div>
-                            <div class="topRight">Right</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="top">
-                    <div class="topContainer">
-                        <div class="topImg">
-                            <img src="img/venecija.jpg" alt="Venecija">
-                            <div class="topPrice">79‎€
-                            </div>
-                        </div>
-                        <div class="topName">Venecija</div>
-                        <div class="topSection">
-                            <div class="topLeft">Left</div>
-                            <div class="topRight">Right</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="top">
-                    <div class="topContainer">
-                        <div class="topImg">
-                            <img src="img/madrid1.jpg" alt="Madrid">
-                            <div class="topPrice">79‎€
-                            </div>
-                        </div>
-                        <div class="topName">Madrid</div>
-                        <div class="topSection">
-                            <div class="topLeft">Left</div>
-                            <div class="topRight">Right</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="topSea">
-                <div class="top">1200
-                </div>
-                <div class="top">1200
-                </div>
-                <div class="top">1200
-                </div>
-                <div class="top">1200
-                </div>
-                <div class="top">1200
-                </div>
-                <div class="top">1200
-                </div>
-                <div class="top">1200
-                </div>
-                <div class="top">1200
-                </div>
-            </div>
-    </article>
-    <footer>
-        <div class="footerContainer">
-            <div class="footerUp">
-                <div class="footImg">
-                    <img src="img/palma.png" alt="Palma">
-                </div>
-                <div class="foot">
-                    <p>Turisticka organizacija Palma travel osnovana je u aprilu 2019. sa ciljem
-                         da se pronađe idealno mesto za odmor nakon završetka 6-to mesečnih napornih predavanja.</p>
-                </div>
-                <div class="footSoc">
-                    <div class="socNet">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="footerDown">
-                <p>@2019. <span>Palma Travel</span>. All Rights Reserved.</p>
-                <div>
-                    <a href="#header"><i class="fas fa-arrow-circle-up" title=" Povratak na vrh"></i></a>
-                </div>
-            </div>
-        </div>
-    </footer>
 </body>
+
 </html>

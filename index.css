@@ -1,21 +1,41 @@
 * {
-    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    margin:0;
     padding: 0;
-    font-family: "Montserrat", Arial, sans-serif;
 }
-
+body {
+    margin: 0;
+    font-family: Didot, serif;
+}
+html {
+    scroll-behavior: smooth;
+}
+.container{
+    transition: margin-left .5s;
+    display: grid;
+    grid-template-areas: 
+    'header'
+    'section'
+    'article'
+    'footer';
+}
+header {
+    grid-area: header;
+    position: sticky;
+    top:0;
+    z-index: 1;
+}
 .navbar {
     display: grid;
     grid-template-columns: auto auto auto auto auto;
     background-color: #000000cb;
-
 }
-
 .navbar div {
     position: relative;
     text-align: center;
 }
-
 .navbar div a {
     display: block;
     text-decoration: none;
@@ -23,71 +43,63 @@
     color: rgb(255, 255, 255);
     font-size: 2vw;
 }
-
 .navbar .home {
     background-color: rgb(2, 2, 2);
 }
-
 .navbar .home a {
-    color: rgba(190, 134, 243, 0.856);
+    color: #3cd03c;
+    font-weight: bold;
 }
-
+.navbar .home a:hover {
+    color: #32fa00;
+    text-shadow: 2px 2px #31a531d2;
+}
 .navbar .home span {
-    color: rgba(84, 149, 247, 0.836);
+    color: #d83ad5;
 }
-
 .navSection a:before {
     position: absolute;
     content: "";
     height: 3px;
     bottom: 0px;
     left: 0;
-    background-color: rgb(255, 208, 56);
+    background-color: #3cd03c;
     visibility: hidden;
     transform: scaleX(0);
     transition: all 0.4s ease-in-out 0s;
     width: 100%;
 }
-
 .navSection a:hover:before {
     visibility: visible;
     transform: scaleX(1);
 }
-
-.navbar div a i,
-.navLeft div a i {
+.navbar div a i, .navLeft div a i{
     font-size: 0.7em;
     padding-left: 5px;
     display: inline;
 }
-
 .navbar .navSection:hover,
-.navLeft .navSection:hover {
+.navLeft .navSection:hover{
     background-color: rgba(0, 0, 0, 0.575);
 }
-
 .navbar .navSection:hover .dropdown,
 .navLeft .navSection:hover .dropdown {
     display: block;
 }
-
 .home a:hover,
 .menuBar:hover {
     color: gold;
 }
-
 .menuBar {
     display: none;
     cursor: pointer;
     align-items: center;
     color: white;
 }
-
 .menuBar i {
     font-size: 3vw;
 }
-
-.navbar .navSection .dropdown {
+.navbar .navSection .dropdown{
     display: none;
     position: absolute;
     width: 100%;
@@ -102,81 +114,124 @@
     opacity: 0.9;
     color: rgb(255, 255, 255);
 }
-
 .dropdown a:hover,
 .navLeft a:hover {
     color: gold;
-    background-color: rgba(114, 114, 114, 0.774);
+    background-color: rgba(114, 114, 114, 0.856);
 }
-
 .dropdown a:hover:before {
     background-color: black;
 }
-
-.navLeft {
+section {
+    grid-area: section;
+    padding: 0;
+    margin: 0;
+  }
+.mySlides {
+    display: none;
+    height: 40vw;
+}
+.mySlides img {
     height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: #111;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
+    min-width: 320px;
 }
-
-.navLeft a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 2vw;
-    color: #ffffff;
-    display: block;
-    transition: 0.2s;
+.pictureContainer {
+    display: grid;
 }
-
-.navLeft a:hover {
-    color: #f1f1f1;
+.slideshow-container {
+    position: relative;
 }
-
-.navLeft .closebtn i {
-    color: gold;
-    font-size: 4vw;
+.prev,
+.next {
     cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
 }
-
-.navLeft .closebtn {
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
     position: absolute;
     top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
 }
-
-.navLeft .dropdown a {
-    background-color: rgb(114, 114, 114);
-    display: block;
+.dots {
     position: relative;
-    color: rgb(255, 255, 255);
+    display: flex;
+    background-color:#000000cb;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap:wrap;
+    padding-right:1vw;
 }
-
-.navLeft .navSection .dropdown {
-    display: none;
+.dot {
     position: relative;
-    width: 100%;
-    z-index: 1;
+    cursor: pointer;
+    height: 13px;
+    width: 13px;
+    margin: 10px 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+#text {
+    color: rgba(255, 255, 255, 0.918);
+    font-size: 1.2em;
+    padding: 8px 12px;
+    position: absolute;
+    left: 5px;
+    text-align: left;
+}
+.active,
+.dot:hover {
+    background-color: #717171;
+}
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
 }
 article {
     grid-area: article;
-
 }
-
 .articleContainer {
     display: grid;
     grid-template-rows: auto auto;
     background-color: #ecdfdf;
 }
-
 .topCity,
 .topSea {
     margin-top: 20px;
@@ -271,19 +326,19 @@ article {
     font-weight: bold;
     font-size: 1.5vw;
 }
-.footerContainer {
+footer {
+    grid-area: footer;
+  }
+  .footerContainer {
     display: grid;
     color: #bdbdbd;
 }
-
 .footerUp {
     background-color: #620a60;
     display: grid;
     grid-template-columns: auto auto 1fr;
     position: relative;
-
 }
-
 .footerUp div {
     display: grid;
     position: relative;
@@ -309,7 +364,6 @@ article {
     display:grid;
     justify-content: center;
     align-items: center;
-
 }
 .footerUp .footSoc a  {
     color:white;
@@ -335,58 +389,97 @@ article {
     align-items: center;
     font-size: 2.7vw;
 }
-
 .footerDown span {
     font-weight: bold;
     color: #3cd03c;
 }
-
 .footerContainer .footerDown div {
     right: 1vw;
     position: absolute;
 }
-
 .footerDown div a {
     display: block;
     text-decoration: none;
     cursor: pointer;
 
 }
-
 .footerDown div a i {
-    color: #9ce49cf1;
+    color: #33ff00;;
 }
-
 .footerDown div a i:hover {
-    color: #33ff00;
+    color: gold;
+}  
+  .navLeft {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
 }
-@media (max-width: 750px) {
-    .navbar {
+.navLeft a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 2vw;
+    color: #ffffff;
+    display: block;
+    transition: 0.2s;
+}
+.navLeft a:hover {
+    color: #f1f1f1;
+}
+.navLeft .closebtn i {
+    color: gold;
+    font-size: 4vw;
+    cursor: pointer;
+}
+.navLeft .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+.navLeft .dropdown a{
+    background-color: rgb(114, 114, 114);
+    display: block;
+    position: relative;
+    color: rgb(255, 255, 255);
+}
+.navLeft .navSection .dropdown {
+    display: none;
+    position: relative;
+    width: 100%;
+    z-index: 1;
+}
+  @media (max-width: 750px) {
+    .navbar{
         padding-left: 15px;
         grid-template-columns: auto auto;
         justify-content: space-between;
     }
-
-    .navbar .home {
-        background-color: #00000000;
+    .navbar .home{
+    background-color: #00000000;
     }
-
     .menuBar {
         padding: 0 15px;
         display: grid;
     }
-
-    .navbar div a,
-    .menuBar i {
+    .navbar div a,.menuBar i{
         font-size: 4vw;
     }
-
-    .navbar .navSection {
-        display: none;
+    .navbar .navSection{
+        display:none;
     }
-
     .navLeft a {
         font-size: 5vw;
+    }
+    .mySlides {
+        height: 42vw;
     }
     .topCity,
     .topSea {
@@ -404,15 +497,15 @@ article {
         grid-template-columns: 1fr 2fr;
     }
     .footerUp .footSoc a  {
-    font-size: 7vw;
-    padding-right: 7vw;
-}
+        font-size: 7vw;
+        padding-right: 7vw;
+    }
     .footerUp .foot{
         display: none;
     }
     .footerDown div a i {
-    font-size: 6vw;
-    }  
+        font-size: 6vw;
+    }
 }
 @media (max-width: 450px) {
     .topCity,
@@ -428,5 +521,7 @@ article {
     .top {
         height: 100vw;
     }
+    .mySlides {
+        height: 50vw;
+    }
 }
-   
