@@ -29,7 +29,7 @@ header {
 .navbar {
     display: grid;
     grid-template-columns: auto auto auto auto auto;
-    background-color: #000000cb;
+    background-color: #000000da;
 }
 
 .navbar div {
@@ -41,7 +41,7 @@ header {
     display: block;
     text-decoration: none;
     padding: 6px 0;
-    color: rgb(255, 255, 255);
+    color: #d83ad5;
     font-size: 2vw;
 }
 
@@ -95,7 +95,7 @@ header {
     display: block;
 }
 
-.home a:hover, .menuBar:hover {
+.home a:hover, .menuBar:hover, .navSection a:hover {
     color: gold;
 }
 
@@ -103,7 +103,7 @@ header {
     display: none;
     cursor: pointer;
     align-items: center;
-    color: white;
+
 }
 
 .menuBar i {
@@ -116,6 +116,7 @@ header {
     width: 100%;
     box-shadow: 0px 8px 16px 2px rgba(0, 0, 0, 0.8);
     z-index: 1;
+    background-color: #000000;
 }
 
 .navbar .dropdown a {
@@ -123,12 +124,12 @@ header {
     display: block;
     position: relative;
     opacity: 0.9;
-    color: rgb(255, 255, 255);
+    color: #cccccc;
 }
 
 .dropdown a:hover, .navLeft a:hover {
     color: gold;
-    background-color: rgba(114, 114, 114, 0.856);
+    background-color: rgba(145, 145, 145, 0.74);
 }
 
 .dropdown a:hover:before {
@@ -140,18 +141,18 @@ header {
     height: 100vh;
 }
 
-.first {
+.first, .second {
     overflow: auto;
 }
 
-.first div {
+.first div, .second div {
     display: grid;
     font-size: 1.5vw;
     padding: 10px;
     background-color: #d185d094;
 }
 
-.first div h4 {
+.first div h4, .second div h4 {
     color: black;
 }
 
@@ -210,9 +211,9 @@ header {
 
 .tabcontent {
     display: none;
-    padding: 6px 12px;
+    padding: 6px 2vw;
     border: 1px solid #ccc;
-    font-size: 2vw;
+    font-size: 1.7vw;
     background-color: #d185d094;
 }
 
@@ -236,7 +237,7 @@ th {
 }
 
 th, td {
-    padding: 0.5vw;
+    padding: 0;
     text-align: center;
 }
 
@@ -512,6 +513,9 @@ footer {
 @media (max-width: 450px) {
     .content {
         height: auto;
+    }
+    .first div, .tabcontent, .tab button {
+        font-size: 2.7vw;
     }
     .img1, .img2, .img3, .img4, .img5 {
         background-attachment: scroll;
