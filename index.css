@@ -232,9 +232,18 @@ article {
     grid-template-rows: auto auto;
     background-color: #ecdfdf;
 }
+.articleContainer h2 {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    background-color: rgb(19, 113, 221);
+    color: rgba(255, 255, 255, 0.918);
+    padding: 5px 0;
+    border-top: 1px solid rgb(112, 112, 112);
+    font-size: 2vw;
+}
 .topCity,
 .topSea {
-    margin-top: 20px;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     padding: 10px;
@@ -456,6 +465,12 @@ footer {
     width: 100%;
     z-index: 1;
 }
+  @media (max-width: 1000px) {
+    .topCity,
+    .topSea {
+        grid-template-columns: repeat(4, 1fr);
+    }
+  }
   @media (max-width: 750px) {
     .navbar{
         padding-left: 15px;
@@ -469,7 +484,7 @@ footer {
         padding: 0 15px;
         display: grid;
     }
-    .navbar div a,.menuBar i{
+    .navbar div a,.menuBar i, .articleContainer h2{
         font-size: 4vw;
     }
     .navbar .navSection{
