@@ -1,3 +1,70 @@
+let grckaMore = "";
+let turskaMore = "";
+let evropskiGradovi = "";
+
+async function renderEvropskiGradovi() {
+    let response = await fetch('http://localhost:3000/Evropski-gradovi');
+    let eg = await response.json();
+    for (i = 0; i < eg.length; i++) {
+        evropskiGradovi += `<div class="top" id="${eg[i].id}">
+                    <div class="topContainer">
+                        <div class="topImg">
+                            <img src="${eg[i].slikeGrada}" alt="${eg[i].grad}">
+                            <div class="topPrice">${eg[i].cena}‎€</div>
+                        </div>
+                        <div class="topName">${eg[i].grad}</div>
+                        <div class="topSection">
+                            <div class="topLeft">${eg[i].brojDana}‎d/${eg[i].brojNocenja}n</div>
+                            <div class="topRight"><i class="fas fa-bus-alt"></i></div>
+                        </div>
+                    </div>
+                </div>`
+        $("#topCity").html(evropskiGradovi);
+    }
+}
+
+async function renderGrckaMore() {
+    let response = await fetch('http://localhost:3000/Grcka-more');
+    let gm = await response.json();
+    for (i = 0; i < gm.length; i++) {
+        grckaMore += `<div class="top" id="${gm[i].id}">
+                    <div class="topContainer">
+                        <div class="topImg">
+                            <img src="${gm[i].slikeGrada}" alt="${gm[i].grad}">
+                            <div class="topPrice">${gm[i].cena}‎€</div>
+                        </div>
+                        <div class="topName">${gm[i].grad}</div>
+                        <div class="topSection">
+                            <div class="topLeft">${gm[i].brojDana}‎d/${gm[i].brojNocenja}n</div>
+                            <div class="topRight"><i class="fas fa-bus-alt"></i></div>
+                        </div>
+                    </div>
+                </div>`
+        $("#topSeaGreece").html(grckaMore);
+    }
+}
+
+async function renderTurskaMore() {
+    let response = await fetch('http://localhost:3000/Turska-more');
+    let tm = await response.json();
+    for (i = 0; i < tm.length; i++) {
+        turskaMore += `<div class="top" id="${tm[i].id}">
+                    <div class="topContainer">
+                        <div class="topImg">
+                            <img src="${tm[i].slikeGrada}" alt="${tm[i].grad}">
+                            <div class="topPrice">${tm[i].cena}‎€</div>
+                        </div>
+                        <div class="topName">${tm[i].grad}</div>
+                        <div class="topSection">
+                            <div class="topLeft">${tm[i].brojDana}‎d/${tm[i].brojNocenja}n</div>
+                            <div class="topRight"><i class="fas fa-bus-alt"></i></div>
+                        </div>
+                    </div>
+                </div>`
+        $("#topSeaTurkey").html(turskaMore);
+    }
+}
+
 var slideIndex = 1;
 showSlides(slideIndex);
 
