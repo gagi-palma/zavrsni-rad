@@ -12,31 +12,19 @@
     <title>Palma travel</title>
 </head>
 
-<body onload="renderEvropskiGradovi(),renderGrckaMore(),renderTurskaMore()">
+<body>
     <div class="container" id="container">
         <header>
             <div class="navbar" id="navbar">
                 <div class="home"><a href="#">Palma <span>TRAVEL</span></a></div>
                 <div class="navSection"><a href="#">Metropole<i class="fas fa-angle-down"></i></a>
-                    <div class="dropdown">
-                        <a href="#">Link 1</a>
-                        <a href="#">Link 2</a>
-                        <a href="#">Link 3</a>
-                    </div>
+                    <div class="dropdown" id="dropdownCity"></div>
                 </div>
                 <div class="navSection"><a href="#">Letovanje-Grčka<i class="fas fa-angle-down"></i></a>
-                    <div class="dropdown">
-                        <a href="#">Link 1</a>
-                        <a href="#">Link 2</a>
-                        <a href="#">Link 3</a>
-                    </div>
+                    <div class="dropdown" id="dropdownGreece"></div>
                 </div>
                 <div class="navSection"><a href="#">Letovanje-Turska<i class="fas fa-angle-down"></i></a>
-                    <div class="dropdown">
-                        <a href="#">Link 1</a>
-                        <a href="#">Link 2</a>
-                        <a href="#">Link 3</a>
-                    </div>
+                    <div class="dropdown" id="dropdownTurkey"></div>
                 </div>
                 <div class="navSection"><a href="#">Kontakt</a></div>
                 <div class="menuBar"><i class="fa fa-bars" onclick="openNav()"></i></div>
@@ -82,15 +70,9 @@
 
                 </div>
 
-                <div class="dots">
-                    <div id="text">Caption Three</div>
-                    <span class="dot" onclick="currentSlide(1)"></span>
-                    <span class="dot" onclick="currentSlide(2)"></span>
-                    <span class="dot" onclick="currentSlide(3)"></span>
-                    <span class="dot" onclick="currentSlide(4)"></span>
-                    <span class="dot" onclick="currentSlide(5)"></span>
-                    <span class="dot" onclick="currentSlide(6)"></span>
-                    <span class="dot" onclick="currentSlide(7)"></span>
+                <div class="dots" id="dots">
+                    <div id="text"></div>
+
                 </div>
             </div>
         </section>
@@ -133,21 +115,21 @@
     <div class="navLeft" id="navLeft">
         <div class="closebtn" onclick="closeNav()"><i class="fas fa-times"></i></div>
         <div class="navSection"><a href="#">Metropole<i class="fas fa-angle-down"></i></a>
-            <div class="dropdown">
+            <div class="dropdown" id="leftNavDropdownCity">
                 <a href="#">Link 1</a>
                 <a href="#">Link 2</a>
                 <a href="#">Link 3</a>
             </div>
         </div>
         <div class="navSection"><a href="#">Grčka<i class="fas fa-angle-down"></i></a>
-            <div class="dropdown">
+            <div class="dropdown" id="leftNavDropdownGreece">
                 <a href="#">Link 1</a>
                 <a href="#">Link 2</a>
                 <a href="#">Link 3</a>
             </div>
         </div>
         <div class="navSection"><a href="#">Turska<i class="fas fa-angle-down"></i></a>
-            <div class="dropdown">
+            <div class="dropdown" id="leftNavDropdownTurkey">
                 <a href="#">Link 1</a>
                 <a href="#">Link 2</a>
                 <a href="#">Link 3</a>

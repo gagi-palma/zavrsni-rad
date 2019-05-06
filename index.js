@@ -22,7 +22,6 @@ async function renderEvropskiGradovi() {
         $("#topCity").html(evropskiGradovi);
     }
 }
-
 async function renderGrckaMore() {
     let response = await fetch('http://localhost:3000/Grcka-more');
     let gm = await response.json();
@@ -43,7 +42,6 @@ async function renderGrckaMore() {
         $("#topSeaGreece").html(grckaMore);
     }
 }
-
 async function renderTurskaMore() {
     let response = await fetch('http://localhost:3000/Turska-more');
     let tm = await response.json();
@@ -65,7 +63,49 @@ async function renderTurskaMore() {
     }
 }
 
-var slideIndex = 1;
+$(document).ready(renderEvropskiGradovi(),renderGrckaMore(),renderTurskaMore());
+
+async function renderDropdownCity() {
+    let response = await fetch('http://localhost:3000/Evropski-gradovi');
+    let euroCity = "";
+    let eC = await response.json();
+    for (i = 0; i < eC.length; i++) {
+        euroCity += `<a href="secondPage.html" id="${eC[i].id}">${eC[i].grad}</a>`
+        $("#dropdownCity").html(euroCity);
+        $("#leftNavDropdownCity").html(euroCity);
+    }
+}
+async function renderDropdownGreece() {
+    let response = await fetch('http://localhost:3000/Grcka-more');
+    let greekSea = "";
+    let gm = await response.json();
+    for (i = 0; i < gm.length; i++) {
+        greekSea += `<a href="secondPage.html" id="${gm[i].id}">${gm[i].grad}</a>`
+        $("#dropdownGreece").html(greekSea);
+        $("#leftNavDropdownGreece").html(greekSea);
+    }
+}
+async function renderDropdownTurkey() {
+    let response = await fetch('http://localhost:3000/Turska-more');
+    let tm = await response.json();
+    let turkeySea ="";
+    for (i = 0; i < tm.length; i++) {
+        turkeySea += `<a href="secondPage.html" id="${tm[i].id}">${tm[i].grad}</a>`
+        $("#dropdownTurkey").html(turkeySea);
+        $("#leftNavDropdownTurkey").html(turkeySea);
+    }
+}
+$(document).ready(renderDropdownCity(),renderDropdownGreece(),renderDropdownTurkey(),createDots());
+
+function createDots() {
+    let dot = "";
+    for(var i = 1; i < 9; i++){
+        dot +=`<span class="dot" onclick="currentSlide(${i})"></span>`
+        $("#dots").html(dot);  
+    }
+}
+
+let slideIndex = 1;
 showSlides(slideIndex);
 
 function plusSlides(n) {
@@ -77,10 +117,9 @@ function currentSlide(n) {
 }
 
 function showSlides(n) {
-    var i;
-    var slides = document.getElementsByClassName("mySlides");
-    var dots = document.getElementsByClassName("dot");
-    var captionText = document.getElementById("text");
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("dot");
     if (n > slides.length) {
         slideIndex = 1
     }
@@ -95,9 +134,6 @@ function showSlides(n) {
     }
     slides[slideIndex - 1].style.display = "block";
     dots[slideIndex - 1].className += " active";
-
-    let x = document.getElementById(slideIndex).alt;
-    captionText.innerHTML = x;
 }
 
 setInterval(function () {
