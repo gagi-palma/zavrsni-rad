@@ -30,7 +30,7 @@ header {
 .navbar {
     display: grid;
     grid-template-columns: auto auto auto auto auto;
-    background-color: #000000cb;
+    background-color: #000000e8;
 }
 .navbar div {
     position: relative;
@@ -40,22 +40,22 @@ header {
     display: block;
     text-decoration: none;
     padding: 6px 0;
-    color: #d83ad5;
+    color: #acacac;
     font-size: 2vw;
 }
 .navbar .home {
     background-color: rgb(2, 2, 2);
 }
-.navbar .home a {
-    color: #3cd03c;
+.navbar .home {
+    display:grid;
+    justify-content:center;
+    align-items: center;
+    color: rgb(19, 113, 221);
+    font: italic 2.4vw "Fira Sans", serif;
     font-weight: bold;
 }
-.navbar .home a:hover {
-    color: #32fa00;
-    text-shadow: 2px 2px #31a531d2;
-}
-.navbar .home span {
-    color: #d83ad5;
+.navSection a:hover{
+    color:gold;
 }
 .navSection a:before {
     position: absolute;
@@ -63,7 +63,7 @@ header {
     height: 3px;
     bottom: 0px;
     left: 0;
-    background-color: #3cd03c;
+    background-color: rgb(19, 113, 221);
     visibility: hidden;
     transform: scaleX(0);
     transition: all 0.4s ease-in-out 0s;
@@ -173,7 +173,7 @@ section {
 .dots {
     position: relative;
     display: flex;
-    background-color:#000000cb;
+    background-color: #000000;
     justify-content: flex-end;
     align-items: center;
     flex-wrap:wrap;
@@ -189,14 +189,6 @@ section {
     border-radius: 50%;
     display: inline-block;
     transition: background-color 0.6s ease;
-}
-#text {
-    color: rgba(255, 255, 255, 0.918);
-    font-size: 1.2em;
-    padding: 8px 12px;
-    position: absolute;
-    left: 5px;
-    text-align: left;
 }
 .active,
 .dot:hover {
@@ -236,8 +228,8 @@ article {
     display: flex;
     justify-content:center;
     align-items: center;
-    background-color: rgb(19, 113, 221);
-    color: rgba(255, 255, 255, 0.918);
+    background-color: #000000e8;
+    color: #acacac;
     padding: 5px 0;
     border-top: 1px solid rgb(112, 112, 112);
     font-size: 2vw;
@@ -338,94 +330,54 @@ article {
 footer {
     grid-area: footer;
   }
-  .footerContainer {
+.footerContainer {
     display: grid;
-    color: #bdbdbd;
-}
-.footerUp {
-    background-color: #620a60;
-    display: grid;
-    grid-template-columns: auto auto 1fr;
-    position: relative;
-}
-.footerUp div {
-    display: grid;
-    position: relative;
-    justify-content: left;
-    align-items: center;
-    height: 120px;
-}
-
-.footImg img {
-    height: 100%;
-    width: 100%;
-}
-.footerUp .foot{
-    display:grid;
+    color: #ffffff;
     justify-content: center;
     align-items: center;
+    background-color: #000000e8;
+    grid-template-columns: 1fr 4fr 1fr;
+    font-size: 2vw;
+    padding: 10px 5px;
 }
-.footerUp .foot p{
-    padding: 3px;
-    color: white;
-}
-.footerUp .footSoc{
-    display:grid;
+.footerContainer .socNet {
+    display: grid;
+    grid-template-columns: auto auto auto;
     justify-content: center;
     align-items: center;
+    grid-column-gap: 50px;
+    padding-left: 30px;
 }
-.footerUp .footSoc a  {
-    color:white;
-    display:block;
-    font-size: 3vw;
-    text-decoration: none;
-    padding-right: 3vw;
+.footerContainer .socNet a i,
+.footerContainer a i {
+    color: #acacac;
 }
-.footerUp .footSoc a:hover{
+.footerContainer p{
+    display: grid;
+    justify-content: center;
+    align-items: center;
     color:rgb(19, 113, 221);
 }
-.footerUp .footSoc .socNet {
+.footerContainer a{
     display: grid;
-    justify-content: center;
-    grid-template-columns: auto auto auto;
-}
-.footerDown {
-    display: grid;
-    background-color: #3c013b;
-    position: relative;
-    height: 50px;
-    justify-content: center;
+    justify-content: right;
     align-items: center;
-    font-size: 2.7vw;
+    padding-right:10px;
 }
-.footerDown span {
-    font-weight: bold;
-    color: #3cd03c;
+.footerContainer .socNet a i:hover {
+    color:rgb(19, 113, 221);
 }
-.footerContainer .footerDown div {
-    right: 1vw;
-    position: absolute;
-}
-.footerDown div a {
-    display: block;
-    text-decoration: none;
-    cursor: pointer;
-
-}
-.footerDown div a i {
-    color: #33ff00;;
-}
-.footerDown div a i:hover {
+.footerContainer a i:hover{
     color: gold;
 }  
-  .navLeft {
+.navLeft {
     height: 100%;
     width: 0;
     position: fixed;
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: #111;
+    background-color: rgb(0, 0, 0);
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
@@ -434,7 +386,7 @@ footer {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 2vw;
-    color: #ffffff;
+    color: #acacac;
     display: block;
     transition: 0.2s;
 }
@@ -454,10 +406,13 @@ footer {
     margin-left: 50px;
 }
 .navLeft .dropdown a{
-    background-color: rgb(114, 114, 114);
+    background-color: rgb(49, 49, 49);
     display: block;
     position: relative;
-    color: rgb(255, 255, 255);
+    color: #acacac;
+}
+.navLeft .dropdown a:hover{
+    color:gold;
 }
 .navLeft .navSection .dropdown {
     display: none;
@@ -476,9 +431,7 @@ footer {
         padding-left: 15px;
         grid-template-columns: auto auto;
         justify-content: space-between;
-    }
-    .navbar .home{
-    background-color: #00000000;
+        background-color: rgb(0, 0, 0);
     }
     .menuBar {
         padding: 0 15px;
@@ -508,18 +461,15 @@ footer {
     .topPrice {
         font-size: 4.5vw;
     }
-    .footerUp {
-        grid-template-columns: 1fr 2fr;
+    .footerContainer,
+    .navbar .home {
+        font-size: 5vw;
     }
-    .footerUp .footSoc a  {
-        font-size: 7vw;
-        padding-right: 7vw;
+    .footerContainer p {
+        display:none;
     }
-    .footerUp .foot{
-        display: none;
-    }
-    .footerDown div a i {
-        font-size: 6vw;
+    .footerContainer a i {
+        padding-right: 0;
     }
 }
 @media (max-width: 450px) {
