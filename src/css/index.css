@@ -94,7 +94,7 @@ header {
     display: none;
     cursor: pointer;
     align-items: center;
-    color: white;
+    color: #acacac;
 }
 .menuBar i {
     font-size: 3vw;
@@ -140,6 +140,7 @@ section {
 }
 .slideshow-container {
     position: relative;
+    border-bottom: 3px solid #000000e8;;
 }
 .prev,
 .next {
@@ -149,7 +150,7 @@ section {
     width: auto;
     padding: 16px;
     margin-top: -22px;
-    color: white;
+    color: #acacac;
     font-weight: bold;
     font-size: 18px;
     transition: 0.6s ease;
@@ -163,17 +164,10 @@ section {
 .next:hover {
     background-color: rgba(0, 0, 0, 0.8);
 }
-.numbertext {
-    color: #f2f2f2;
-    font-size: 12px;
-    padding: 8px 12px;
-    position: absolute;
-    top: 0;
-}
 .dots {
     position: relative;
     display: flex;
-    background-color: #000000;
+    background-color: #ecdfdf;
     justify-content: flex-end;
     align-items: center;
     flex-wrap:wrap;
@@ -185,14 +179,15 @@ section {
     height: 13px;
     width: 13px;
     margin: 10px 2px;
-    background-color: #bbb;
+    background-color: black;
     border-radius: 50%;
     display: inline-block;
     transition: background-color 0.6s ease;
 }
 .active,
 .dot:hover {
-    background-color: #717171;
+    
+    background-color: rgb(19, 113, 221);
 }
 .fade {
     animation-name: fade;
@@ -238,8 +233,8 @@ article {
 .topSea {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    padding: 10px;
-    grid-gap: 12px 12px;
+    padding: 20px;
+    grid-gap: 20px 20px;
     border-top: 1px solid rgb(112, 112, 112);
 }
 .top {

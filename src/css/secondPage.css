@@ -126,18 +126,18 @@ header {
     height: 100vh;
 }
 
-.first, .second {
+.first, .second, .fourth {
     overflow: auto;
 }
 
-.first div, .second div {
+.first div, .second div,.fourth div {
     display: grid;
     font-size: 1.5vw;
     padding: 10px;
     background-color: #d185d094;
 }
 
-.first div h4, .second div h4 {
+.first div h4, .second div h4, .fourth div p {
     color: black;
 }
 
@@ -252,27 +252,22 @@ table {
 }
 
 .img1 {
-    background-image: url("./img/zakintos4.jpg");
     height: 100vh;
 }
 
 .img2 {
-    background-image: url("./img/zakintos.jpg");
     height: 100vh;
 }
 
 .img3 {
-    background-image: url("./img/zakintos1.jpg");
     height: 100vh;
 }
 
 .img4 {
-    background-image: url("./img/zakintos2.jpg");
     height: 100vh;
 }
 
 .img5 {
-    background-image: url("./img/zakintos3.jpg");
     height: 100vh;
 }
 

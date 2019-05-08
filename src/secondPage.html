@@ -1,13 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en", lang="sr">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" crossorigin="anonymous">
-    <link rel="stylesheet" href="secondPage.css">
-    <script src="secondPage.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/secondPage.css">
+    <script src="js/secondPage.js" defer></script>
     <title>Palma travel</title>
 </head>
 
@@ -32,35 +33,11 @@
         <main>
             <div class="content img1"></div>
             <div class="content section first">
-                <div>
-                    <h4>ZAKINTOS (ZANTE)</h4>
-                    <p>Najjužnije je i treće po veličini jonsko ostrvo, poznato po
-                        dugim peščanim plažama, kristalnom moru tirkizne boje, blagoj mediteranskoj klimi, kornjačama,
-                        vinogradima, maslinama, bogatom istorijskom i kulturnom nasleđu. Priroda je Zakintosu podarila
-                        idilične
-                        pejsaže na severu, istoku i jugu ostrva, a na zapadnoj strani veliki broj morskih pećina,
-                        krševitih
-                        uvala, strmih litica duž obale. Najpoznatija plaža na ostrvu je Navajo, skrivena uvala
-                        pristupačna
-                        samo
-                        sa mora, sa najsitnijim belim kamenčićima, nestvarno tirkiznim morem i poznatom olupinom broda
-                        po
-                        kojoj
-                        je dobila ime a koja je i zaštitni znak Zakintosa. Ostrvo je i najveći prirodni rezervat na
-                        Mediteranu
-                        jedne vrste morskih kornjača zvane "Caretta Caretta", koja na peščanim plažama na jugu Zakintosa
-                        polaže
-                        jaja. Najpoznatije mesto za noćni provod je Laganas a popularna turistička mesta su još i
-                        Cilivi,
-                        Alikes, Alikanas, Argasi kao i Vasilikos sa svojim čuvenim peščanim plažama.</p>
-                </div>
+                <div id="infoCity"></div>
             </div>
             <div class="content img2"></div>
             <div class="content section second">
-                <div>
-                    <h4>Laganas</h4>
-                    <p>Najveće i najpopularnije turističko mesto na Zakintosu, udaljen je 9km od grada Zantea i oko 7km od aerodroma. Nalazi se u zalivu Laganas, zakonom zaštićenom morskom nacionalnom parku. Pored kilometrima dugačke peščane plaže i čuvenih Caretta Caretta kornjača, svoju popularnost duguje mnogobrojnim klubovima, diskotekama i barovima kao i restoranima, prodavnicama i svim ostalim sadržajima koji čine ovo mesto nezaobilaznim, pre svega za mlade ali i za sve koji žele aktivan odmor i letovanje u mestu u kojem je akcenat na tome da noćni život nikada ne prestaje…</p>
-                </div>
+                <div id="infoPlace"></div>
             </div>
             <div class="content img3"></div>
             <div class="content section">
@@ -183,7 +160,9 @@
                 </div>
             </div>
             <div class="content img4"></div>
-            <div class="content section">CETVRTI</div>
+            <div class="content section fourth">
+                <div id="infoRooms"></div>
+            </div>
             <div class="content img5"></div>
         </main>
         <footer>
@@ -201,13 +180,13 @@
     <div class="navLeft" id="navLeft">
         <div class="closebtn" onclick="closeNav()"><i class="fas fa-times"></i></div>
         <div class="navSection"><a href="#">Metropole<i class="fas fa-angle-down"></i></a>
-            <div class="dropdown"></div>
+            <div class="dropdown" id="leftNavDropdownCity"></div>
         </div>
         <div class="navSection"><a href="#">Grčka<i class="fas fa-angle-down"></i></a>
-            <div class="dropdown"></div>
+            <div class="dropdown" id="leftNavDropdownGreece"></div>
         </div>
         <div class="navSection"><a href="#">Turska<i class="fas fa-angle-down"></i></a>
-            <div class="dropdown"></div>
+            <div class="dropdown" id="leftNavDropdownTurkey"> </div>
         </div>
         <div class="navSection"><a href="#">Kontakt</a></div>
     </div>
